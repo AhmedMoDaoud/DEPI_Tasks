@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: db-deny-frontend
+spec:
+  podSelector:
+    matchLabels:
+      app: mysql-db
+  policyTypes:
+  - Ingress
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          app: product
+    - podSelector:
+        matchLabels:
+          app: order
+    ports:
+    - protocol: TCP
+      port: 3306

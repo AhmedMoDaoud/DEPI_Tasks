@@ -1,0 +1,38 @@
+
+# Product Service
+# =========================
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: product
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: product
+  template:
+    metadata:
+      labels:
+        app: product
+    spec:
+      containers:
+        - name: product
+          image: hashicorp/http-echo
+          args:
+            - "-listen=:8080"
+            - "-text=Product Service Connected to DB"
+          ports:
+            - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: product-service
+spec:
+  selector:
+    app: product
+  ports:
+    - port: 8080
+      targetPort: 8080
+  type: ClusterIP
+
