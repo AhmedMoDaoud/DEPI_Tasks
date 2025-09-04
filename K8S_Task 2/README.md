@@ -8,7 +8,7 @@
 - [networkpolicy.yaml](./networkpolicy.yml)
 
 *** Results Documentation ***
-
+- output of get all command
 ![Screenshot](output-of-get-all-command.png)
 ## 1. Product → Database
 
@@ -81,6 +81,7 @@ Frontend Connected to Product & Order
 
 Frontend accessible externally through NodePort.
 ![Screenshot](Frontend-is-reachable-externally-through-NodePort.png)
+
 
 
 
