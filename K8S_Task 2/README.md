@@ -9,6 +9,7 @@
 
 *** Results Documentation ***
 
+![Screenshot](output-of-get-all-command.png)
 ## 1. Product → Database
 
 **Command:**
@@ -80,6 +81,7 @@ Frontend Connected to Product & Order
 
 Frontend accessible externally through NodePort.
 ![Screenshot](Frontend-is-reachable-externally-through-NodePort.png)
+
 
 
 
